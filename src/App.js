@@ -4,7 +4,7 @@ import PatientDashboard from './components/PatientDashboard';
 
 function App() {
   return (
-    <Router basename="/{repository-name}">
+    <Router basename={process.env.REACT_APP_BASENAME}>
       <div className="App">
         <Switch>
           <Route path="/patient-dashboard/:firstName/:lastName" component={PatientDashboard} />

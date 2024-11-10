@@ -1,5 +1,4 @@
 module.exports = {
-  // ... other webpack configurations
   module: {
     rules: [
       {
@@ -7,7 +6,6 @@ module.exports = {
         loader: 'json-loader',
         type: 'javascript/auto'
       },
-      // ... other rules
     ]
   }
 }; 

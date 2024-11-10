@@ -1,7 +1,7 @@
 {
   "name": "patient-dashboard",
   "version": "0.1.0",
-  "homepage": "https://jzengo3.github.gatech.edu/CS_6440_Deployment",
+  "homepage": "https://jjz13744.github.io/CS_6440_Deployment",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
