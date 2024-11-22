@@ -226,10 +226,11 @@ const PatientDashboard = () => {
           setCurrentPatientIndex(currentIndex);
         }
 
-        // Set initial test
+        // Set initial test and reset chart key
         if (formattedLabData.length > 0) {
           const uniqueTests = [...new Set(formattedLabData.map(data => data.test))];
           setCurrentTest(uniqueTests[0]);
+          setChartKey(prevKey => prevKey + 1);
         }
       } catch (err) {
         console.error('Error:', err);
@@ -292,6 +293,8 @@ const PatientDashboard = () => {
     const nextPatient = AVAILABLE_PATIENTS[nextIndex];
     history.push(`/patient-dashboard/${nextPatient.firstName}/${nextPatient.lastName}`);
     setCurrentPatientIndex(nextIndex);
+    // Reset chart key to force re-render
+    setChartKey(prevKey => prevKey + 1);
   };
 
   if (error) return <div style={styles.error}>Error: {error}</div>;
