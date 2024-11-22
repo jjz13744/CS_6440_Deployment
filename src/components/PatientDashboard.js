@@ -287,14 +287,42 @@ const PatientDashboard = () => {
     }, 3000);
   };
 
-  // Add function to handle patient cycling
-  const handleCyclePatient = () => {
+  // Update the handleCyclePatient function
+  const handleCyclePatient = async () => {
     const nextIndex = (currentPatientIndex + 1) % AVAILABLE_PATIENTS.length;
     const nextPatient = AVAILABLE_PATIENTS[nextIndex];
+    
+    // First update the route
     history.push(`/patient-dashboard/${nextPatient.firstName}/${nextPatient.lastName}`);
     setCurrentPatientIndex(nextIndex);
-    // Reset chart key to force re-render
+    
+    // Reset states
+    setShowReferenceLines(true); // Ensure reference lines are enabled for new patient
     setChartKey(prevKey => prevKey + 1);
+    
+    // Pre-load the next patient's data to ensure proper test selection
+    try {
+      const folderName = getFolderName(nextPatient.firstName, nextPatient.lastName);
+      const [, labModule] = await Promise.all([
+        import(`/src/data/${folderName}/patient_data.json`),
+        import(`/src/data/${folderName}/lab_data.json`)
+      ]);
+
+      const formattedLabData = labModule.default.map(entry => ({
+        date: entry.date,
+        value: entry.value,
+        test: entry.test,
+        referenceRange: entry.referenceRange
+      }));
+
+      // Set the first test as active
+      if (formattedLabData.length > 0) {
+        const uniqueTests = [...new Set(formattedLabData.map(data => data.test))];
+        setCurrentTest(uniqueTests[0]);
+      }
+    } catch (err) {
+      console.error('Error loading next patient:', err);
+    }
   };
 
   if (error) return <div style={styles.error}>Error: {error}</div>;
