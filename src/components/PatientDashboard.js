@@ -27,7 +27,6 @@ const AVAILABLE_PATIENTS = [
   { firstName: 'Helen', lastName: 'Dunham' },
   { firstName: 'Gerald', lastName: 'Murray' },
   { firstName: 'Geneva', lastName: 'Torres' },
-  { firstName: 'Chi', lastName: 'Mayhew' },
   { firstName: 'Harold', lastName: 'Hurst' },
   { firstName: 'Albert', lastName: 'Crowe' },
   { firstName: 'Hester', lastName: 'Hartzler' },
