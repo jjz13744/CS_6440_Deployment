@@ -5,17 +5,18 @@ import '../ToggleSwitch.css';
 
 // Keep the REFERENCE_RANGES constant
 const REFERENCE_RANGES = {
-  'Hemoglobin': { low: 13.5, high: 17.5 },
-  'RBC Count': { low: 4.5, high: 5.9 },
-  'WBC Count': { low: 3.5, high: 10.5 },
-  'Platelet Count': { low: 150, high: 450 },
-  'Hematocrit': { low: 38.8, high: 50.0 },
-  'Glucose': { low: 70, high: 100 },
-  'Creatinine': { low: 0.7, high: 1.3 },
-  'BUN': { low: 7, high: 20 },
-  'Cholesterol': { low: 0, high: 200 },
-  'HDL Cholesterol': { low: 40, high: 60 }  // Changed from Infinity to a reasonable upper limit
+  'Hemoglobin': { low: 12.0, high: 17.5 }, // g/dL
+  'RBC Count': { low: 4.1, high: 5.9 },    // million cells/µL
+  'WBC Count': { low: 4.0, high: 11.0 },   // x10^3/µL
+  'Platelet Count': { low: 150, high: 450 }, // x10^3/µL
+  'Hematocrit': { low: 36, high: 53 },     // %
+  'Glucose': { low: 70, high: 99 },        // mg/dL (fasting)
+  'Creatinine': { low: 0.59, high: 1.35 }, // mg/dL
+  'BUN': { low: 7, high: 20 },             // mg/dL
+  'Cholesterol': { low: 50, high: 200 },    // mg/dL (desirable total cholesterol)
+  'HDL Cholesterol': { low: 40, high: 60 } // mg/dL (higher is generally better)
 };
+
 
 // Add this helper function to get the folder name in the correct format
 const getFolderName = (firstName, lastName) => 
