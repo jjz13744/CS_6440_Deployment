@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/CS_6440_Deployment/static/css/main.94753189.css",
-    "main.js": "/CS_6440_Deployment/static/js/main.e9d04edc.js",
+    "main.js": "/CS_6440_Deployment/static/js/main.a5a70224.js",
     "static/js/156.d9522f81.chunk.js": "/CS_6440_Deployment/static/js/156.d9522f81.chunk.js",
-    "static/js/197.ee41c8e3.chunk.js": "/CS_6440_Deployment/static/js/197.ee41c8e3.chunk.js",
     "static/js/865.577b1635.chunk.js": "/CS_6440_Deployment/static/js/865.577b1635.chunk.js",
     "static/js/395.634756bf.chunk.js": "/CS_6440_Deployment/static/js/395.634756bf.chunk.js",
     "static/js/272.b3aa7c7a.chunk.js": "/CS_6440_Deployment/static/js/272.b3aa7c7a.chunk.js",
@@ -14,7 +13,6 @@
     "static/js/336.bc4476a9.chunk.js": "/CS_6440_Deployment/static/js/336.bc4476a9.chunk.js",
     "static/js/522.43f68e3e.chunk.js": "/CS_6440_Deployment/static/js/522.43f68e3e.chunk.js",
     "static/js/214.f5cea61a.chunk.js": "/CS_6440_Deployment/static/js/214.f5cea61a.chunk.js",
-    "static/js/167.97937032.chunk.js": "/CS_6440_Deployment/static/js/167.97937032.chunk.js",
     "static/js/235.829a110c.chunk.js": "/CS_6440_Deployment/static/js/235.829a110c.chunk.js",
     "static/js/685.74e79c18.chunk.js": "/CS_6440_Deployment/static/js/685.74e79c18.chunk.js",
     "static/js/2.71d83ecf.chunk.js": "/CS_6440_Deployment/static/js/2.71d83ecf.chunk.js",
@@ -25,7 +23,6 @@
     "static/js/66.675b2f34.chunk.js": "/CS_6440_Deployment/static/js/66.675b2f34.chunk.js",
     "static/js/532.fe6fb21c.chunk.js": "/CS_6440_Deployment/static/js/532.fe6fb21c.chunk.js",
     "static/js/195.096e7cbc.chunk.js": "/CS_6440_Deployment/static/js/195.096e7cbc.chunk.js",
-    "static/js/580.a08209f8.chunk.js": "/CS_6440_Deployment/static/js/580.a08209f8.chunk.js",
     "static/js/912.5b44fead.chunk.js": "/CS_6440_Deployment/static/js/912.5b44fead.chunk.js",
     "static/js/910.2d3bab31.chunk.js": "/CS_6440_Deployment/static/js/910.2d3bab31.chunk.js",
     "static/js/247.a4a52fed.chunk.js": "/CS_6440_Deployment/static/js/247.a4a52fed.chunk.js",
@@ -37,10 +34,10 @@
     "static/js/781.290f35fd.chunk.js": "/CS_6440_Deployment/static/js/781.290f35fd.chunk.js",
     "index.html": "/CS_6440_Deployment/index.html",
     "main.94753189.css.map": "/CS_6440_Deployment/static/css/main.94753189.css.map",
-    "main.e9d04edc.js.map": "/CS_6440_Deployment/static/js/main.e9d04edc.js.map"
+    "main.a5a70224.js.map": "/CS_6440_Deployment/static/js/main.a5a70224.js.map"
   },
   "entrypoints": [
     "static/css/main.94753189.css",
-    "static/js/main.e9d04edc.js"
+    "static/js/main.a5a70224.js"
   ]
 }
