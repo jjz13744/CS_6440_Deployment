@@ -22,19 +22,18 @@ const REFERENCE_RANGES = {
 const getFolderName = (firstName, lastName) => 
   `${firstName.toLowerCase()}_${lastName.toLowerCase()}`;
 
-// Add a list of available patients
-const AVAILABLE_PATIENTS = [
-  { firstName: 'Altha', lastName: 'Prey' },
-  { firstName: 'Amanda', lastName: 'Georges' },
-  { firstName: 'Eric', lastName: 'Ramsey' },
-  { firstName: 'Evelyn', lastName: 'Sconiers' },
-  { firstName: 'Harold', lastName: 'Hurst' },
-  { firstName: 'Jacqueline', lastName: 'Dollar' },
-  { firstName: 'Matthew', lastName: 'Ferrari' },
-  { firstName: 'Michael', lastName: 'Williams' },
-  { firstName: 'Patricia', lastName: 'Brown' },
-  { firstName: 'Vicki', lastName: 'Aleman' }
-];
+// Get list of available patients from data folder structure
+const AVAILABLE_PATIENTS = (() => {
+  const context = require.context('../data/', true, /^\.\/[^/]+$/);
+  return context.keys().map(key => {
+    // Extract folder name and split into first/last name
+    const folderName = key.replace('./', '');
+    const [firstName, lastName] = folderName.split('_').map(name => 
+      name.charAt(0).toUpperCase() + name.slice(1)
+    );
+    return { firstName, lastName };
+  });
+})();
 
 // Add this function before the PatientDashboard component
 const findLabTest = (text) => {
